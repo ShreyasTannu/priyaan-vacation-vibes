@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-primary: #3ABEFF;
+  --color-secondary: #20B2AA;
+  --color-accent: #FF7A59;
+  --font-sans: Poppins;
+}

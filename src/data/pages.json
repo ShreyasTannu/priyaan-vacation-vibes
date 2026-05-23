@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "index",
+    "title": "Home",
+    "page_type": "landing",
+    "description": "Full-screen hero with Maldives background, parallax effects, and center-left aligned content featuring 'Feel the Vibe. Live the Journey.' headline. Floating trip planner bar overlapping hero. Split layout 'Who We Are' section with image collage. 3x2 services grid with rounded cards. Popular destinations image grid. Icon-based 'Why Choose Us' section. Strong CTA banner with 'Plan My Trip' button. Smooth scroll animations, fade-up text, and staggered card reveals throughout.",
+    "status": "new"
+  },
+  {
+    "slug": "services",
+    "title": "Services & Packages",
+    "page_type": "services",
+    "description": "Header with 'Our Travel Services' title. Alternating layout service blocks featuring Customized Holiday Packages, International Travel, Domestic Experiences, Honeymoon & Luxury Travel, Flights & Hotels, Visa Assistance, and Corporate Travel. Each block uses image-text alternating pattern with rounded cards and soft shadows. Hover effects with card lift and zoom-in images.",
+    "status": "new"
+  },
+  {
+    "slug": "experiences",
+    "title": "Experiences",
+    "page_type": "portfolio",
+    "description": "Intro section with 'Experiences We've Crafted' heading. Featured experiences grid showcasing Bali Luxury Escape, Maldives Honeymoon Retreat, Dubai Adventure Trip, Thailand Island Tour, Singapore Family Vacation. 'Our Approach' section with 5-step process visualization. Testimonials section with quote cards. Strengths section with icon grid layout. Slide-in animations and staggered reveals for all sections.",
+    "status": "new"
+  },
+  {
+    "slug": "contact",
+    "title": "About & Contact",
+    "page_type": "contact",
+    "description": "About section with 'About Priyaan Vacation Vibes' heading and brand story. Safety section with verified partners grid. Multi-step animated enquiry form titled 'Plan Your Perfect Trip \u2708\ufe0f' with 5 steps: personal info, destination details, traveler info, preferences, and final CTA. Progress bar, slide transitions, and success screen with WhatsApp/Call buttons. Mobile-first responsive design with smooth form animations.",
+    "status": "new"
+  }
+]

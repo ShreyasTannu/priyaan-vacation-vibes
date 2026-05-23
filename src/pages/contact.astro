@@ -1,0 +1,481 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact Us">
+<section class="bg-primary text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+        Get in touch to plan your perfect vacation and start your next adventure
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Plan Your Perfect Trip ✈️</h2>
+      <p class="text-xl text-slate-600">
+        Tell us about your dream vacation and we'll create a personalized itinerary just for you
+      </p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
+      <div id="enquiry-form" class="relative">
+        <!-- Progress Bar -->
+        <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-slate-600">Step <span id="current-step">1</span> of 5</span>
+            <span class="text-sm text-slate-500" id="step-title">Personal Information</span>
+          </div>
+          <div class="w-full bg-slate-200 rounded-full h-2">
+            <div id="progress-bar" class="bg-primary h-2 rounded-full transition-all duration-500 ease-out" style="width: 20%"></div>
+          </div>
+        </div>
+
+        <!-- Step 1: Personal Information -->
+        <div id="step-1" class="step-content p-6 space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">First Name *</span>
+              </div>
+              <input type="text" class="input input-bordered w-full px-4 py-3" placeholder="Enter your first name" required>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Last Name *</span>
+              </div>
+              <input type="text" class="input input-bordered w-full px-4 py-3" placeholder="Enter your last name" required>
+            </label>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Email Address *</span>
+              </div>
+              <input type="email" class="input input-bordered w-full px-4 py-3" placeholder="your@email.com" required>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Phone Number *</span>
+              </div>
+              <input type="tel" class="input input-bordered w-full px-4 py-3" placeholder="+1 (555) 123-4567" required>
+            </label>
+          </div>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Country/Region *</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3" required>
+              <option disabled selected>Select your country</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+              <option>India</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Step 2: Destination Details -->
+        <div id="step-2" class="step-content p-6 space-y-6 hidden">
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Preferred Destination *</span>
+            </div>
+            <input type="text" class="input input-bordered w-full px-4 py-3" placeholder="e.g., Maldives, Bali, Switzerland" required>
+          </label>
+          <div class="grid md:grid-cols-2 gap-6">
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Departure Date *</span>
+              </div>
+              <input type="date" class="input input-bordered w-full px-4 py-3" required>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Return Date *</span>
+              </div>
+              <input type="date" class="input input-bordered w-full px-4 py-3" required>
+            </label>
+          </div>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Trip Duration</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3">
+              <option disabled selected>Select duration</option>
+              <option>3-5 days</option>
+              <option>1 week</option>
+              <option>2 weeks</option>
+              <option>3-4 weeks</option>
+              <option>1+ months</option>
+            </select>
+          </label>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Budget Range (USD) *</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3" required>
+              <option disabled selected>Select your budget</option>
+              <option>Under $2,000</option>
+              <option>$2,000 - $5,000</option>
+              <option>$5,000 - $10,000</option>
+              <option>$10,000 - $20,000</option>
+              <option>$20,000+</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Step 3: Traveler Information -->
+        <div id="step-3" class="step-content p-6 space-y-6 hidden">
+          <div class="grid md:grid-cols-3 gap-6">
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Adults (18+) *</span>
+              </div>
+              <select class="select select-bordered w-full px-4 py-3" required>
+                <option disabled selected>Select</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Children (2-17)</span>
+              </div>
+              <select class="select select-bordered w-full px-4 py-3">
+                <option selected>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </label>
+            <label class="form-control w-full">
+              <div class="label">
+                <span class="label-text font-medium">Infants (0-2)</span>
+              </div>
+              <select class="select select-bordered w-full px-4 py-3">
+                <option selected>0</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </label>
+          </div>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Accommodation Preference *</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3" required>
+              <option disabled selected>Select accommodation type</option>
+              <option>Luxury Resort/Hotel (5 star)</option>
+              <option>Premium Hotel (4 star)</option>
+              <option>Standard Hotel (3 star)</option>
+              <option>Boutique Hotel</option>
+              <option>Villa/Private Rental</option>
+              <option>Budget/Hostel</option>
+            </select>
+          </label>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Room Configuration</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3">
+              <option disabled selected>Select room type</option>
+              <option>Single Room</option>
+              <option>Double/Twin Room</option>
+              <option>Family Room</option>
+              <option>Suite</option>
+              <option>Multiple Rooms</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Step 4: Preferences -->
+        <div id="step-4" class="step-content p-6 space-y-6 hidden">
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Travel Style *</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3" required>
+              <option disabled selected>What type of trip interests you?</option>
+              <option>Relaxation & Beach</option>
+              <option>Adventure & Outdoor</option>
+              <option>Cultural & Historical</option>
+              <option>Luxury & Wellness</option>
+              <option>Family Fun</option>
+              <option>Romantic Getaway</option>
+              <option>Business Travel</option>
+            </select>
+          </label>
+          <div class="space-y-4">
+            <div class="label">
+              <span class="label-text font-medium">Activities of Interest (Select all that apply)</span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Water Sports & Diving</span>
+              </label>
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Hiking & Trekking</span>
+              </label>
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Cultural Tours</span>
+              </label>
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Food & Wine Experiences</span>
+              </label>
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Spa & Wellness</span>
+              </label>
+              <label class="cursor-pointer label justify-start gap-3">
+                <input type="checkbox" class="checkbox checkbox-primary">
+                <span class="label-text">Wildlife & Safari</span>
+              </label>
+            </div>
+          </div>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Special Requirements or Requests</span>
+            </div>
+            <textarea class="textarea textarea-bordered w-full px-4 py-3 min-h-24" placeholder="Any dietary restrictions, accessibility needs, special occasions, or other requests..."></textarea>
+          </label>
+        </div>
+
+        <!-- Step 5: Final Details -->
+        <div id="step-5" class="step-content p-6 space-y-6 hidden">
+          <div class="text-center mb-6">
+            <h3 class="text-xl font-semibold text-slate-900 mb-2">Almost Done! 🎉</h3>
+            <p class="text-slate-600">Just a few more details and we'll start planning your perfect trip</p>
+          </div>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">How did you hear about us?</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3">
+              <option disabled selected>Select an option</option>
+              <option>Google Search</option>
+              <option>Social Media</option>
+              <option>Friend/Family Referral</option>
+              <option>Travel Blog/Website</option>
+              <option>Previous Customer</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Preferred Contact Method *</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3" required>
+              <option disabled selected>How would you like us to contact you?</option>
+              <option>Email</option>
+              <option>Phone Call</option>
+              <option>WhatsApp</option>
+              <option>Video Call</option>
+            </select>
+          </label>
+          <label class="form-control w-full">
+            <div class="label">
+              <span class="label-text font-medium">Best Time to Contact</span>
+            </div>
+            <select class="select select-bordered w-full px-4 py-3">
+              <option disabled selected>Select preferred time</option>
+              <option>Morning (9 AM - 12 PM)</option>
+              <option>Afternoon (12 PM - 5 PM)</option>
+              <option>Evening (5 PM - 8 PM)</option>
+              <option>Anytime</option>
+            </select>
+          </label>
+          <div class="bg-slate-50 rounded-xl p-4">
+            <label class="cursor-pointer label justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" required>
+              <span class="label-text">I agree to the <a href="#" class="link link-primary">Terms of Service</a> and <a href="#" class="link link-primary">Privacy Policy</a> *</span>
+            </label>
+            <label class="cursor-pointer label justify-start gap-3 mt-2">
+              <input type="checkbox" class="checkbox checkbox-primary">
+              <span class="label-text">I would like to receive travel tips and special offers via email</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="step-content p-8 text-center hidden">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Thank You! 🎉</h3>
+          <p class="text-lg text-slate-600 mb-8 max-w-md mx-auto">
+            Your trip inquiry has been submitted successfully. Our travel experts will contact you within 24 hours to start planning your perfect vacation.
+          </p>
+          <a href="/" class="btn btn-primary btn-lg">Return to Home</a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div id="form-navigation" class="flex justify-between items-center p-6 bg-slate-50 border-t border-slate-100">
+          <button id="prev-btn" class="btn btn-outline">Previous</button>
+          <button id="next-btn" class="btn btn-primary">Next</button>
+          <button id="submit-btn" class="btn btn-primary hidden">Submit Inquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Have questions? We're here to help you plan the perfect vacation
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-4">Call Us</h3>
+        <p class="text-slate-600 mb-4">Speak directly with our travel experts</p>
+        <p class="text-primary font-semibold">+1 (555) 123-4567</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-4">Email Us</h3>
+        <p class="text-slate-600 mb-4">Send us your travel inquiries</p>
+        <p class="text-primary font-semibold">info@priyaanvacationvibes.com</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-4">Visit Us</h3>
+        <p class="text-slate-600 mb-4">Come to our office for personalized consultation</p>
+        <p class="text-primary font-semibold">123 Travel Street, City, State 12345</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Multi-step form functionality
+  let currentStep = 1;
+  const totalSteps = 5;
+  
+  const stepTitles = {
+    1: 'Personal Information',
+    2: 'Destination Details',
+    3: 'Traveler Information',
+    4: 'Preferences',
+    5: 'Final Details'
+  };
+  
+  function updateProgress() {
+    const progressBar = document.getElementById('progress-bar');
+    const currentStepSpan = document.getElementById('current-step');
+    const stepTitle = document.getElementById('step-title');
+    
+    const percentage = (currentStep / totalSteps) * 100;
+    if (progressBar) progressBar.style.width = percentage + '%';
+    if (currentStepSpan) currentStepSpan.textContent = currentStep.toString();
+    if (stepTitle) stepTitle.textContent = stepTitles[currentStep];
+  }
+  
+  function showStep(step: number) {
+    // Hide all steps
+    for (let i = 1; i <= totalSteps; i++) {
+      const stepElement = document.getElementById(`step-${i}`);
+      if (stepElement) {
+        stepElement.classList.add('hidden');
+      }
+    }
+    
+    // Show current step
+    const currentStepElement = document.getElementById(`step-${step}`);
+    if (currentStepElement) {
+      currentStepElement.classList.remove('hidden');
+    }
+    
+    // Update navigation buttons
+    const prevBtn = document.getElementById('prev-btn') as HTMLButtonElement;
+    const nextBtn = document.getElementById('next-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    if (prevBtn) prevBtn.disabled = step === 1;
+    
+    if (step === totalSteps) {
+      if (nextBtn) nextBtn.classList.add('hidden');
+      if (submitBtn) submitBtn.classList.remove('hidden');
+    } else {
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (submitBtn) submitBtn.classList.add('hidden');
+    }
+    
+    updateProgress();
+  }
+  
+  // Navigation event listeners
+  const prevBtn = document.getElementById('prev-btn');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+  }
+  
+  const nextBtn = document.getElementById('next-btn');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+  }
+  
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => {
+      // Hide form and show success screen
+      const enquiryForm = document.getElementById('enquiry-form');
+      const successScreen = document.getElementById('success-screen');
+      const formNavigation = document.getElementById('form-navigation');
+      
+      if (enquiryForm) enquiryForm.classList.add('hidden');
+      if (successScreen) successScreen.classList.remove('hidden');
+      if (formNavigation) formNavigation.classList.add('hidden');
+    });
+  }
+  
+  // Initialize form
+  showStep(1);
+</script>
+</Layout>

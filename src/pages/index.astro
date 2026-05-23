@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Home">
+<section class="relative min-h-screen bg-[url('/hero.jpg')] bg-cover bg-center bg-no-repeat flex items-center">
+  <div class="absolute inset-0 bg-slate-900/60"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        Feel the Vibe.<br>
+        <span class="text-yellow-400">Live the Journey.</span>
+      </h1>
+      <p class="text-xl text-white/90 mb-8 leading-relaxed">
+        Discover breathtaking destinations and create unforgettable memories with our expertly crafted travel experiences.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/experiences" class="btn btn-primary btn-lg px-8">
+          Explore Destinations
+        </a>
+        <a href="/contact" class="btn btn-outline btn-lg px-8 text-white border-white hover:bg-white hover:text-slate-900">
+          Plan My Trip
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="relative -mt-20 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+      <div class="form-control">
+        <div class="label">
+          <span class="label-text font-medium">Destination</span>
+        </div>
+        <select class="select select-bordered w-full">
+          <option>Where to?</option>
+          <option>Maldives</option>
+          <option>Bali</option>
+          <option>Thailand</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <div class="label">
+          <span class="label-text font-medium">Check-in</span>
+        </div>
+        <input type="date" class="input input-bordered w-full">
+      </div>
+      <div class="form-control">
+        <div class="label">
+          <span class="label-text font-medium">Check-out</span>
+        </div>
+        <input type="date" class="input input-bordered w-full">
+      </div>
+      <button class="btn btn-primary btn-lg">Search Trips</button>
+    </div>
+  </div>
+</div>
+
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-slate-900 mb-6">Who We Are</h2>
+        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+          We are passionate travel enthusiasts dedicated to creating extraordinary journeys that go beyond ordinary tourism. With years of expertise and local connections worldwide, we craft personalized experiences that capture the true essence of each destination.
+        </p>
+        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+          From pristine beaches to cultural immersions, adventure expeditions to luxury retreats, we believe every traveler deserves a journey that resonates with their soul and creates memories to last a lifetime.
+        </p>
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="text-slate-700">Expert local guides and authentic experiences</span>
+        </div>
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="text-slate-700">24/7 support throughout your journey</span>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="text-slate-700">Sustainable and responsible tourism practices</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <img src="https://placehold.co/300x400/0ea5e9/ffffff?text=Beach+Paradise" alt="Beach destination" class="w-full h-auto object-cover rounded-2xl shadow-lg">
+          <img src="https://placehold.co/300x300/10b981/ffffff?text=Cultural+Experience" alt="Cultural experience" class="w-full h-auto object-cover rounded-2xl shadow-lg">
+        </div>
+        <div class="space-y-4 mt-8">
+          <img src="https://placehold.co/300x300/f59e0b/ffffff?text=Adventure+Tours" alt="Adventure tour" class="w-full h-auto object-cover rounded-2xl shadow-lg">
+          <img src="https://placehold.co/300x400/8b5cf6/ffffff?text=Luxury+Resort" alt="Luxury accommodation" class="w-full h-auto object-cover rounded-2xl shadow-lg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        From planning to execution, we handle every detail of your perfect getaway
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Custom Itineraries</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Personalized travel plans crafted to match your interests, budget, and timeline for the perfect adventure.
+        </p>
+      </div>
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Luxury Accommodations</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Handpicked premium hotels, resorts, and unique stays that offer exceptional comfort and unforgettable experiences.
+        </p>
+      </div>
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Adventure Tours</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Thrilling expeditions and outdoor activities led by expert guides for adrenaline seekers and nature lovers.
+        </p>
+      </div>
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Cultural Experiences</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Immersive cultural tours and authentic local experiences that connect you with the heart of each destination.
+        </p>
+      </div>
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Event Planning</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Destination weddings, corporate retreats, and special celebrations planned to perfection in stunning locations.
+        </p>
+      </div>
+      <div class="card bg-white shadow-xl border border-slate-100 rounded-2xl p-8 hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">24/7 Support</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Round-the-clock assistance and emergency support to ensure your peace of mind throughout your journey.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Popular Destinations</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Discover the world's most breathtaking locations handpicked by our travel experts
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=Maldives" alt="Maldives" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Maldives</h3>
+          <p class="text-white/90">Pristine beaches & luxury resorts</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/10b981/ffffff?text=Bali" alt="Bali" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Bali</h3>
+          <p class="text-white/90">Cultural heritage & tropical paradise</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/f59e0b/ffffff?text=Thailand" alt="Thailand" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Thailand</h3>
+          <p class="text-white/90">Adventure & authentic cuisine</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/8b5cf6/ffffff?text=Greece" alt="Greece" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Greece</h3>
+          <p class="text-white/90">Ancient history & island hopping</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/ef4444/ffffff?text=Japan" alt="Japan" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Japan</h3>
+          <p class="text-white/90">Modern culture & traditional charm</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+        <img src="https://placehold.co/400x500/06b6d4/ffffff?text=Iceland" alt="Iceland" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">Iceland</h3>
+          <p class="text-white/90">Natural wonders & northern lights</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-900 mb-4">Why Choose Us</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Experience the difference with our commitment to excellence and personalized service
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Trusted Expertise</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Over 10 years of experience crafting unforgettable journeys with a 98% customer satisfaction rate.
+        </p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Best Value</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Competitive pricing with exclusive deals and partnerships ensuring maximum value for your investment.
+        </p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Personal Touch</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Dedicated travel consultants who understand your preferences and create truly personalized experiences.
+        </p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Safety First</h3>
+        <p class="text-slate-600 leading-relaxed">
+          Comprehensive travel insurance, safety protocols, and emergency support for complete peace of mind.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold text-white mb-6">Ready for Your Next Adventure?</h2>
+    <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+      Let us turn your travel dreams into reality. Our expert team is ready to craft the perfect journey tailored just for you.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact" class="btn btn-secondary btn-lg px-8">
+        Plan My Trip
+      </a>
+      <a href="/experiences" class="btn btn-outline btn-lg px-8 text-white border-white hover:bg-white hover:text-primary">
+        View Experiences
+      </a>
+    </div>
+  </div>
+</section>
+</Layout>
